@@ -794,6 +794,7 @@ img {
 .testimonial__data {
   justify-content: space-between;
   margin-bottom: var(--mb-1);
+  
 }
 
 .testimonial__img {
@@ -1337,4 +1338,13 @@ footer .footer__social a:hover {
 .skills__logo:hover{
   transform: translateY(-.25rem);
   transition: 1s;
+}
+
+
+
+.borri{
+  border: 2px solid#f6685e9e;
+  margin-bottom: 5px;
+  padding: 7px;
+  border-radius: 16px;
 }
