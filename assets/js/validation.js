@@ -4,7 +4,6 @@ const proj = document.getElementById("inpproject");
 const msg = document.getElementById("inpmsg");
 const but = document.getElementById("sub-btn");
 
-
 const n1 = document.getElementById("n1");
 const n2 = document.getElementById("n2");
 const n3 = document.getElementById("n3");
@@ -50,21 +49,21 @@ function validi() {
 
     // Load submit.js if validation is successful
     if (isValid) {
-        const form = document.getElementById('form');
-        const result = document.getElementById('result');
+        const form = document.getElementById("form");
+        const result = document.getElementById("result");
 
         const formData = new FormData(form);
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
-        result.innerHTML = "Please wait..."
+        result.innerHTML = "Please wait...";
 
-        fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
             headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
+                "Content-Type": "application/json",
+                Accept: "application/json",
             },
-            body: json
+            body: json,
         })
             .then(async (response) => {
                 let json = await response.json();
@@ -75,7 +74,7 @@ function validi() {
                     result.innerHTML = json.message;
                 }
             })
-            .catch(error => {
+            .catch((error) => {
                 console.log(error);
                 result.innerHTML = "Something went wrong!";
             })
@@ -86,7 +85,4 @@ function validi() {
                 }, 3000);
             });
     }
-
 }
-
-
