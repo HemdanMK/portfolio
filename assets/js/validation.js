@@ -10,7 +10,6 @@ const n3 = document.getElementById("n3");
 const n4 = document.getElementById("n4");
 
 but.addEventListener("click", function rep(e) {
-        0
     e.preventDefault();
     validi();
 });
